@@ -1,0 +1,11 @@
+<div class="quiz_tasks delete" style = "text-align:center">
+  <h2>Delete Quiz</h2>
+
+ <%= form_for(:quiz_task, :url => {:action => 'destroy', :id=> @quiz_task.id}) do |f| %>
+ <p> Are you sure you want to permanently delete <%= @quiz_task.name %>. </p>
+ <div class="form-buttons">
+	<%= submit_tag("Delete Subject") %>
+ </div>
+ 
+<% end %>
+</div>

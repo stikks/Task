@@ -1,0 +1,23 @@
+<div class="quiz_tasks edit">
+  <h2>Update Quiz</h2>
+
+ <%= form_for(:quiz_task, :url => {:action => 'update', :id=> @quiz_task.id}) do |f| %>
+<table summary="Quiz form fields">
+     <tr>
+        <th>Name</th> 
+		<td><%= f.text_field(:name)%></td>
+	</tr>
+	<tr>
+		<th>Position</th>
+		<td><%= f.text_field(:position)%></td>
+	</tr>
+	<tr>
+		<th>About</th>
+			<td><%= f.text_area(:about)%></td>
+	</tr>
+
+	<div class ="form-buttons">
+		<%= submit_tag("Update Quiz")%>
+	</div>
+ <% end %>
+</div>

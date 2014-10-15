@@ -1,0 +1,29 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="questions show">
+  <h2>Show Question</h2>
+
+  <table summary="Question detail view">
+  <tr>
+    <th>Body</th>
+    <td><%= @question.body%></td>
+  </tr>
+  <tr>
+    <th>A</th>
+    <td><%= @question.A%></td>
+    <th>B</th>
+    <td><%= @question.B%></td>
+    <th>C</th>
+    <td><%= @question.C%></td>
+  </tr>
+  <tr>
+    <th>Created</th>
+    <td><%= @question.created_at %></td>
+  </tr>
+  <tr>
+    <th>Updated</th>
+    <td><%= @question.updated_at %></td>
+  </tr>
+  </table>
+
+</div>
