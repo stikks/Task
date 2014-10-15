@@ -1,0 +1,29 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="quiz_tasks show">
+  <h2>Show Quiz</h2>
+
+  <table summary="QuizTask detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @quiz_task.name %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @quiz_task.position %></td>
+    </tr>
+    <tr>
+      <th>About</th>
+      <td><%= @quiz_task.about %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @quiz_task.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @quiz_task.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

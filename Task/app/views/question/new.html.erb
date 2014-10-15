@@ -1,0 +1,31 @@
+<div class="Question new" style = "text-align:center">
+  <h2>Create Question</h2>
+</div>
+<div style="text-align:center">
+ <%= form_for(:question, :url => {:action => 'create'}) do |f| %>
+<table summary=" form fields">
+     <tr>
+		<th>Number</th>
+		<td><%= f.text_field(:number)%></td>
+	</tr>
+	<tr>
+		<th>About</th>
+			<td><%= f.text_area(:body)%></td>
+	</tr>
+	<tr>
+		<th>A</th>
+		<td><%= f.text_field(:A)%></td>
+		<th>B</th>
+		<td><%= f.text_field(:B)%></td>
+		<th>C</th>
+		<td><%= f.text_field(:C)%></td>
+	</tr>
+	<tr>
+		<th>Answer</th>
+		<td><%= f.text_field(:answer) %></td>
+	</tr>
+</div>
+<div class ="form-buttons">
+	<%= submit_tag("Create Question")%>
+</div>
+<% end %>

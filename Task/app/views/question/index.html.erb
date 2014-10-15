@@ -1,0 +1,15 @@
+ <% if flash[:notice] %>
+ 	<div class="notice"><%= flash[:notice] %></div>
+ <% end %>
+<div style= "text-align:center">
+	<%= @question.each do |t| %>
+	<div>
+		 <%= link_to(t.number, {:action=> 'show', :id=> t.id}, :class => 'action show') %>
+		 <%= link_to("Edit", {:action=> 'edit', :id=> t.id}, :class => 'action edit') %>
+		 <%= link_to("Delete", {:action=> 'delete', :id=> t.id}, :class => 'action delete') %>
+	</div><br>
+	<% end %>
+</div><br><br><br><br>
+<div class ="form-buttons" style = "text-align:center">
+	<%= link_to "Create A New Question", 'question/new', class: "btn btn-primary" %>
+</div>

@@ -1,0 +1,31 @@
+<div class="questions edit">
+  <h2>Update Question</h2>
+
+ <%= form_for(:question, :url => {:action => 'update', :id=> @question.id}) do |f| %>
+<table summary="Question form fields">
+    <tr>
+		<th>Number</th>
+		<td><%= f.text_field(:number)%></td>
+	</tr>
+	<tr>
+		<th>Body</th>
+			<td><%= f.text_area(:body)%></td>
+	</tr>
+	<tr>
+		<th>A</th>
+		<td><%= f.text_field(:A)%></td>
+		<th>B</th>
+		<td><%= f.text_field(:B)%></td>
+		<th>C</th>
+		<td><%= f.text_field(:C)%></td>
+	</tr>
+	<tr>
+        <th>Answer</th> 
+		<td><%= f.text_field(:answer)%></td>
+	</tr>
+
+	<div class ="form-buttons">
+		<%= submit_tag("Update Question")%>
+	</div>
+ <% end %>
+</div>
