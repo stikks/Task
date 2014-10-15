@@ -2,7 +2,7 @@
  	<div class="notice"><%= flash[:notice] %></div>
  <% end %>
 <div style= "text-align:center">
-	<%= @question.each do |t| %>
+	<% @question.each do |t| %>
 	<div>
 		 <%= link_to(t.number, {:action=> 'show', :id=> t.id}, :class => 'action show') %>
 		 <%= link_to("Edit", {:action=> 'edit', :id=> t.id}, :class => 'action edit') %>

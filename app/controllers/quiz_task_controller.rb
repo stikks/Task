@@ -20,6 +20,7 @@ class QuizTaskController < ApplicationController
 
   def show
     @quiz_task = QuizTask.find(params[:id])
+    #questions = Question.find(params[:quiz_task_id])
   end
 
   def create
@@ -41,6 +42,13 @@ class QuizTaskController < ApplicationController
     subject = QuizTask.find(params[:id]).destroy
     flash[:notice] = "Quiz successfully deleted"
     redirect_to(:action=>'index')
+  end
+
+  def start
+    @quiz_task = QuizTask.find(params[:id])
+  end
+
+  def submit
   end
 
 end

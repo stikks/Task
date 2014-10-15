@@ -2,11 +2,12 @@
  	<div class="notice"><%= flash[:notice] %></div>
  <% end %>
 <div style= "text-align:center">
-	<%= @quiz_task.each do |t| %>
+	<% @quiz_task.each do |t| %>
 	<div>
 		 <%= link_to(t.name, {:action=> 'show', :id=> t.id}, :class => 'action show') %>
 		 <%= link_to("Edit", {:action=> 'edit', :id=> t.id}, :class => 'action edit') %>
 		 <%= link_to("Delete", {:action=> 'delete', :id=> t.id}, :class => 'action delete') %>
+		 <%= link_to("Take Quiz", {:action=> 'start', :id=> t.id}, :class => 'action start') %>
 	</div><br>
 	<div>
 		<%= t.about %>

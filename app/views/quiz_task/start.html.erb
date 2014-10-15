@@ -1,0 +1,29 @@
+<div style="text-align:center">
+	<%= form_for(:quiz_task, :url => {:action => 'submit'}) do |f| %>
+		<% @quiz_task.questions.each do |t| %>
+			<table>
+				<pre>
+					<TR>
+						<%= t.number %>.	
+						<%= t.body %>
+					</TR>
+					<br> <br>
+					<TR>
+						<%= radio_button_tag(:option, "A") %>
+						<%= label_tag(:option_A, t.A) %>
+						<%= radio_button_tag(:option, "B") %>
+						<%= label_tag(:option_B, t.B) %>
+						<%= radio_button_tag(:option, "C") %>
+						<%= label_tag(:option_C, t.C) %>
+					</TR>
+				</pre>	
+			</table>
+		<% end %>
+		<p></p>
+		<br>
+		<br>
+		<div class ="form-buttons">
+			<%= submit_tag("Submit Quiz")%>
+		</div>
+	<% end %>
+</div>
